@@ -13,15 +13,10 @@ const ListUsers: FC<ListUserType> = ({ users }: ListUserType) => {
     <div className="list-users">
       <div>
         <List>
-          <ListItem className="mb-1.5 text-[0.9875rem] font-semibold text-slate-700">
-            Usuários
-          </ListItem>
+          <ListItem className="list-users__title">Usuários</ListItem>
 
           {users.map((user: UserType) => (
-            <ListItem
-              key={user.id}
-              className="flex items-center rounded-md p-1.5"
-            >
+            <ListItem key={user.id} className="list-users__item">
               {user.name} - {user.phone}
             </ListItem>
           ))}
